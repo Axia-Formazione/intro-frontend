@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guida alla Programmazione Frontend</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #f8fafc;
+            color: #2d3748;
+            line-height: 1.7;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+            color: white;
+            padding: 4rem 2rem;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #1e3a8a;
+            margin: 3rem 0 1.5rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 5px;
+            height: 70%;
+            background: #f59e0b;
+            border-radius: 3px;
+        }
+
+        .grid {
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            margin: 2rem 0;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #1e3a8a;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .card h3::before {
+            content: '➤';
+            color: #f59e0b;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        li {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        li::before {
+            content: '•';
+            color: #f59e0b;
+            position: absolute;
+            left: 0;
+        }
+
+        .resource-section {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .resource-section h3 {
+            font-size: 1.3rem;
+            color: #1e3a8a;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .resource-section h3::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: #f59e0b;
+            border-radius: 50%;
+        }
+
+        a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #1e3a8a;
+            text-decoration: underline;
+        }
+
+        .badge {
+            background: #f59e0b;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-left: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="container">
+            <h1>Scopri la Programmazione Frontend</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <h2>Cos'è il Frontend?</h2>
+            <p>La programmazione web frontend è la disciplina che si occupa dello sviluppo della parte visibile e interattiva di un sito web. Mentre il backend gestisce la logica e i dati lato server, il frontend si concentra su ciò che gli utenti vedono e con cui interagiscono direttamente nel browser.</p>
+        </div>
+
+        <h2>Linguaggi Fondamentali</h2>
+        
+        <div class="grid">
+            <div class="card">
+                <h3>HTML</h3>
+                <ul>
+                    <li>Struttura base della pagina web</li>
+                    <li>Scheletro fondamentale di ogni sito</li>
+                    <li>Gestione di testi, immagini e link</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>CSS</h3>
+                <ul>
+                    <li>Responsabile dello stile e layout</li>
+                    <li>Gestione colori e tipografia</li>
+                    <li>Disposizione degli elementi</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>JavaScript</h3>
+                <ul>
+                    <li>Aggiunge interattività</li>
+                    <li>Creazione di animazioni</li>
+                    <li>Gestione dinamica dei contenuti</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="resource-section">
+            <h3>Video Tutorial<span class="badge">YouTube</span></h3>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=JRJNvxoh844" target="_blank">Corso HTML - Andrea Ciraolo</a><br>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/JRJNvxoh844?si=hxDlLoTZwwfAkJ59" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </li>
+                <li><a href="https://www.youtube.com/watch?v=1C-ZbhVZ3sI&list=PLP5MAKLy8lP8U-yYn6J4hGfcee4Tirieg" target="_blank">HTML5 Tutorial - Edoardo Midali</a><br>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/1C-ZbhVZ3sI?si=sr4Op9NYPwDRoP_1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </li>
+            </ul>
+        </div>
+
+        <div class="resource-section">
+            <h3>Piattaforme Web<span class="badge">Online</span></h3>
+            <ul>
+                <li><a href="https://www.html.it/guide/guida-html/" target="_blank">HTML.it - Guida Completa</a></li>
+                <li><a href="https://www.coursera.org/learn/html-and-css-in-depth" target="_blank">Coursera - Corso Base</a></li>
+            </ul>
+        </div>
+
+        <div class="resource-section">
+            <h3>Applicazioni Mobile<span class="badge">App</span></h3>
+            <ul>
+                <li>Sololearn: 
+                    <a href="https://play.google.com/store/apps/details?id=com.sololearn" target="_blank">Android</a> | 
+                    <a href="https://apps.apple.com/it/app/sololearn-learn-to-code/id1210079064" target="_blank">iOS</a><br>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/hxHLQ6RTEFI?si=egIU_V7-pM4lawIz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </li>
+            </ul>
+        </div>
+
+        <p style="text-align: center; margin: 3rem 0; color: #64748b;">
+            Tutte le risorse indicate sono completamente gratuite e adatte a principianti
+        </p>
+    </div>
+</body>
+</html>
